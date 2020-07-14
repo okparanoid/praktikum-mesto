@@ -1,3 +1,15 @@
+import { AddPopup } from './AddPopup.js';
+import { Api } from './Api.js';
+import { AvatarPopup } from './AvatarPopup.js';
+import { Card } from './Card.js';
+import { CardList } from './CardList.js';
+import { EditPopup } from './EditPopup.js';
+import { FormValidator } from './FormValidator.js';
+import { ImagePopup } from './ImagePopup.js';
+import { UserInfo} from './UserInfo.js';
+import '../pages/index.css';
+
+
 (function () {
 
   const list = document.querySelector('.places-list');
