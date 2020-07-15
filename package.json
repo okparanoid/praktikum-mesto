@@ -1,8 +1,8 @@
 {
   "name": "praktikum-mesto",
   "version": "0.0.1",
-  "description": "Версия 1.0.0",
-  "main": "index.js",
+  "description": "проект Mesto",
+  "main": "script.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",

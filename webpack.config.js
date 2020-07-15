@@ -27,17 +27,48 @@ module.exports = {
         test: /\.css$/i,
         use: [
               (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-              'css-loader',
+              {
+                loader:'css-loader',
+                options: {
+                    importLoaders: 2
+                }
+              },
               'postcss-loader'
              ]
       },
       {
         test: /\.(png|jpg|gif|ico|svg)$/i,
-        loader: 'file-loader',
-        options: {
-          name: './images/[name].[ext]',
-          esModule: false
-        }
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+            name: './images/[name].[ext]',
+            esModule: false
+            }
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 65
+              },
+              optipng: {
+                enabled: false,
+              },
+              pngquant: {
+                quality: [0.65, 0.90],
+                speed: 4
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              webp: {
+                quality: 75
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
@@ -62,7 +93,7 @@ module.exports = {
       assetNameRegExp: /\.css$/g,
       cssProcessor: require('cssnano'),
       cssProcessorPluginOptions: {
-              preset: ['default'],
+        preset: ['default'],
       },
       canPrint: true
     }),
