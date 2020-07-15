@@ -1,3 +1,15 @@
+import { AddPopup } from './AddPopup.js';
+import { Api } from './Api.js';
+import { AvatarPopup } from './AvatarPopup.js';
+import { Card } from './Card.js';
+import { CardList } from './CardList.js';
+import { EditPopup } from './EditPopup.js';
+import { FormValidator } from './FormValidator.js';
+import { ImagePopup } from './ImagePopup.js';
+import { UserInfo} from './UserInfo.js';
+import '../pages/index.css';
+
+
 (function () {
 
   const list = document.querySelector('.places-list');
@@ -41,7 +53,7 @@
   const imagePopup = new ImagePopup(imageContainer);
 
   const config = {
-    baseUrl: 'https://praktikum.tk/cohort11',
+    baseUrl: process.env.NODE_ENV === 'development' ? 'http://praktikum.tk/cohort11' : 'https://praktikum.tk/cohort11',
     headers: {
       'authorization': 'd6aded7f-e99a-450f-9b2c-fb0bf0a44cb3',
       'Content-Type': 'application/json'

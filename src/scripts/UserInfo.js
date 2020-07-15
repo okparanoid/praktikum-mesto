@@ -1,4 +1,4 @@
-class UserInfo {
+export class UserInfo {
   constructor(nameImput, jobImput, nameContainer, jobContainer, avatarContainer, name, job, avatar, id) {
     this.nameImput = nameImput;
     this.jobImput = jobImput;
