@@ -53,7 +53,7 @@ import '../pages/index.css';
   const imagePopup = new ImagePopup(imageContainer);
 
   const config = {
-    baseUrl: process.env.NODE_ENV === 'development' ? 'http://praktikum.tk/cohort11' : 'https://praktikum.tk/cohort11',
+    baseUrl: process.env.NODE_ENV === 'development' ? 'http://nomoreparties.co/cohort11' : 'https://nomoreparties.co/cohort11',
     headers: {
       'authorization': 'd6aded7f-e99a-450f-9b2c-fb0bf0a44cb3',
       'Content-Type': 'application/json'
