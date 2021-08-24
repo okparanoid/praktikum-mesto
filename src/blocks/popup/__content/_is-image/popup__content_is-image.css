@@ -1,0 +1,5 @@
+.popup__content.popup__content_is-image {
+  border-radius: 0;
+  padding: 0;
+  width: auto;
+}
